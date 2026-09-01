@@ -5,6 +5,8 @@ import { type ReactNode, useEffect, useRef, useState, useSyncExternalStore } fro
 export interface GlyphRainOptions {
   /** Characters used for the falling glyphs. Deduplicated into a glyph atlas. */
   charset?: string;
+  /** Mirror each glyph horizontally, matching the classic mirrored-kana rain look. */
+  mirror?: boolean;
   /** Size of one glyph cell in CSS pixels (8 to 64). */
   cell?: number;
   /** Rain color as [r, g, b] in 0-1 range. */
@@ -67,6 +69,7 @@ const DEFAULT_CHARSET = 'ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂ�
 
 const DEFAULTS: Required<GlyphRainOptions> = {
   charset: DEFAULT_CHARSET,
+  mirror: false,
   cell: 15,
   color: [0.267, 0.455, 1],
   headColor: [0.169, 0.416, 1],
@@ -134,6 +137,7 @@ uniform float uLightRadius;
 uniform float uLightHeight;
 uniform float uRelief;
 uniform float uStir;
+uniform float uMirror;
 uniform float uScroll;
 uniform float uPageLum;
 uniform float uHasContent;
@@ -155,7 +159,7 @@ float glyphMask(vec2 px, float cell, float seed) {
   vec2 id = floor(px / cell);
   vec2 f = fract(px / cell);
   f = f * 0.74 + 0.13;
-  f.x = 1.0 - f.x;
+  f.x = mix(f.x, 1.0 - f.x, uMirror);
   float tick = floor(uTime * uMutate * 1.6 + hash21(id + seed) * 9.0);
   float idx = floor(
     hash21(id * 1.71 + vec2(seed + tick * 7.31, tick * 0.613)) * uGlyphCount
@@ -586,6 +590,7 @@ export function createGlyphRain(elements: GlyphRainElements, options: GlyphRainO
     gl!.uniform1f(uniforms.uLightHeight, Math.max(config.lightHeight, 4) * dpr);
     gl!.uniform1f(uniforms.uRelief, Math.min(Math.max(config.relief, 0), 2));
     gl!.uniform1f(uniforms.uStir, wakeTouched ? stirAmount() : 0);
+    gl!.uniform1f(uniforms.uMirror, config.mirror ? 1 : 0);
     gl!.uniform1f(uniforms.uScroll, content.scrollTop * dpr);
     gl!.uniform1f(uniforms.uPageLum, pageLum);
     gl!.uniform1f(uniforms.uHasContent, htmlInCanvas ? 1 : 0);

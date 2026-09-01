@@ -3,7 +3,7 @@ import { siteConfig } from '@/config/site';
 
 export const HomeContact = () => (
   <section className="flex flex-col gap-8">
-    <Heading no="04" title="Contact" />
+    <Heading no="05" title="Contact" />
 
     <div className="flex flex-col gap-5">
       <p className="m-0 max-w-[56ch] text-sm leading-relaxed font-light">

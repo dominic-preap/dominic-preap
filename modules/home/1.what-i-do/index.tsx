@@ -36,7 +36,7 @@ export const HomeWhatIDo = () => (
             <x.icon strokeWidth={1.5} className="text-primary" />
           </div>
           <h3 className="text-base font-medium">{x.title}</h3>
-          <p className="text-sm leading-[1.8] font-light">{x.desc}</p>
+          <p className="text-foreground/80 text-sm leading-[1.8] font-light">{x.desc}</p>
         </div>
       ))}
     </div>
