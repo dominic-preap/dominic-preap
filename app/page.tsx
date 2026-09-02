@@ -17,7 +17,7 @@ export default function Home() {
         <HomeContact />
 
         <footer className="border-border text-muted-foreground flex justify-between gap-4 border-t pt-6 text-xs tracking-wider">
-          <span>Phnom Penh, ICT</span>
+          <span>Phnom Penh, Cambodia</span>
           <span>Last updated Aug 2026</span>
         </footer>
       </div>

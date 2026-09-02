@@ -3,16 +3,16 @@ import { Heading } from '@/components/atom/heading';
 const work = [
   {
     name: 'Foreign Trade Bank of Cambodia',
-    meta: '2026',
+    meta: '2025 - 2026',
     icon: 'ftb.png',
     color: 'blue',
     href: 'https://ftb.com.kh',
     description:
-      "Full redesign of the bank's website on a headless CMS. Decoupled the frontend from content so marketing ships pages without a deploy, rebuilt on a modern stack end to end."
+      "Full redesign of the bank's website on a headless CMS. Decoupled the frontend from content so marketing ships pages without a deploy; rebuilt on a modern stack end-to-end."
   },
   {
     name: 'Smart Axiata',
-    meta: '2024',
+    meta: '2023 - 2024',
     icon: 'smart.png',
     color: 'blue',
     href: 'https://www.smart.com.kh',
@@ -21,21 +21,21 @@ const work = [
   },
   {
     name: 'RedBox',
-    meta: '2023',
+    meta: '2023 - Present',
     icon: 'redbox.png',
     color: 'blue',
     href: 'https://redbox.menu',
     description:
-      'Product catalog system for small and mid-sized businesses, built to let owners list and manage their own products and display as digital menus to their customers. Integrated ABA for online payment so customers can check out directly.'
+      'Product catalog system for SME businesses, built to let owners manage their own products and display them as digital menus. Integrated ABA for online payment so customers can check out directly.'
   },
   {
     name: 'AngkorDC',
-    meta: '2022',
+    meta: '2022 - Present',
     icon: 'adc.png',
     color: 'blue',
     href: 'https://www.angkordc.com',
     description:
-      'End-to-end system built from scratch: backend, admin dashboard, and a mobile app sharing the same API, single codebase for iOS and Android. Deployed on a managed cloud setup with CI/CD, and monitoring baked in, so shipping updates is a push, not a project.'
+      'End-to-end system built from scratch: backend, admin dashboard, and a mobile app sharing the same API, a single codebase for iOS and Android. Deployed on a managed cloud setup with CI/CD, and monitoring baked in.'
   }
 ];
 
@@ -61,7 +61,7 @@ export const HomeSelectedWork = () => (
             <span className="group-hover:text-primary transition-colors">{x.name}</span>
           </span>
           <span className="text-muted-foreground text-xs">{x.meta}</span>
-          <span className="text-foreground/80 col-span-2 max-w-[70ch] text-xs leading-relaxed font-light">
+          <span className="text-foreground/80 col-span-2 max-w-[75ch] text-xs leading-relaxed font-light">
             {x.description}
           </span>
         </a>

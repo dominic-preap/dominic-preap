@@ -1,28 +1,34 @@
-import { FaGithub, FaLinkedinIn, FaRegEnvelope } from 'react-icons/fa6';
+import { FaGithub, FaLinkedinIn, FaRegEnvelope, FaRegFileLines } from 'react-icons/fa6';
 
 import { ModeToggle } from '@/components/theme/theme-toggle';
 
 import { HomeNotification } from './notification';
+import { HomeProfile } from './profile';
 
 const links = [
   { name: 'email', icon: FaRegEnvelope, href: 'mailto:preapchanoudom@gmail.com' },
   { name: 'gitHub', icon: FaGithub, href: 'https://github.com/dominic-preap' },
-  { name: 'linkedin', icon: FaLinkedinIn, href: 'https://www.linkedin.com/in/dominic-preap' }
-  // { name: 'cv.pdf', icon: FaRegFileLines, href: '#' }
+  { name: 'linkedin', icon: FaLinkedinIn, href: 'https://www.linkedin.com/in/dominic-preap' },
+
+  // https://rxresu.me/builder/01a05db0-9c62-7547-a6f3-29f842cdbc82
+  { name: 'cv.pdf', icon: FaRegFileLines, href: '/cv.pdf' }
 ];
 
 export const HomeBanner = () => (
-  <header className="flex flex-col gap-7 pt-12">
+  <header className="relative flex flex-col gap-7 md:pt-12">
+    <HomeProfile />
+
     <div className="flex justify-between">
       <HomeNotification />
       <ModeToggle />
     </div>
 
     <h1 className="m-0 text-[34px] leading-tight font-semibold tracking-[-0.02em]">Dominic Preap</h1>
-    <p className="text-foreground/80 m-0 max-w-[58ch] text-base leading-[1.75]">
-      Full-stack engineer. I build products across the whole surface — GraphQL, REST APIs in NestJS, React, Next.js on
-      the web, React Native, Expo on phones. Ten years of shipping, mostly to small teams who needed one person to cover
-      a lot of ground.
+    <p className="text-foreground/80 m-0 max-w-[54ch] text-base leading-[1.75]">
+      Full-stack engineer. I ship across the whole stack — NestJS for GraphQL/REST APIs, React and Next.js on the web,
+      React Native/Expo on mobile, and manage the cloud infrastructure underneath it: servers, deployments, CI/CD, the
+      works. 10 years in, mostly on small teams where I&apos;m the one person covering frontend, backend, infra, and
+      everything in between.
     </p>
 
     <nav className="flex flex-wrap gap-6 pt-2 text-sm">

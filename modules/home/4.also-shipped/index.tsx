@@ -109,12 +109,14 @@ const work = [
   {
     name: 'HyreCar',
     meta: '2019 · sunset',
-    src: 'hyrecar.png'
+    src: 'hyrecar.png',
+    href: 'https://www.linkedin.com/company/hyrecar'
   },
   {
     name: 'Photo BPO (Homenet)',
     meta: '2018 · sunset',
-    src: 'homenet.png'
+    src: 'homenet.png',
+    href: 'https://www.homenetauto.com/products/photo-backgrounding'
   },
   {
     name: 'Roqos VPN',
