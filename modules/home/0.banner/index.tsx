@@ -20,9 +20,9 @@ export const HomeBanner = () => (
 
     <h1 className="m-0 text-[34px] leading-tight font-semibold tracking-[-0.02em]">Dominic Preap</h1>
     <p className="text-foreground/80 m-0 max-w-[58ch] text-base leading-[1.75]">
-      Full-stack engineer. I build product across the whole surface — GraphQL, REST APIs in NestJS, React on the web,
-      React Native on phones. Ten years of shipping, mostly to small teams who needed one person to cover a lot of
-      ground.
+      Full-stack engineer. I build products across the whole surface — GraphQL, REST APIs in NestJS, React, Next.js on
+      the web, React Native, Expo on phones. Ten years of shipping, mostly to small teams who needed one person to cover
+      a lot of ground.
     </p>
 
     <nav className="flex flex-wrap gap-6 pt-2 text-sm">
