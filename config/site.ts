@@ -6,7 +6,7 @@ export const siteConfig = {
     "Full-stack engineer. I ship across the whole stack — NestJS for GraphQL/REST APIs, React and Next.js on the web, React Native/Expo on mobile, and manage the cloud infrastructure underneath it: servers, deployments, CI/CD, the works. 10 years in, mostly on small teams where I'm the one person covering frontend, backend, infra, and everything in between.",
   email: 'preapchanoudom@gmail.com',
   url: URL,
-  ogImage: `${URL}/images/og.jpg`,
+  ogImage: `${URL}/images/og.png`,
   keywords: [
     'full stack developer Cambodia',
     'full stack engineer Phnom Penh',
