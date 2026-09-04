@@ -11,8 +11,9 @@ import { cn } from '@/lib/utils';
 export async function generateMetadata(): Promise<Metadata> {
   const title = `${siteConfig.name} | ${siteConfig.position}`;
   const image = siteConfig.ogImage;
-  const description = siteConfig.description;
   const keywords = siteConfig.keywords;
+  const description =
+    '10 years leading development across the stack: NestJS APIs, React/Next.js, React Native mobile, plus the cloud infra behind it all.';
 
   return {
     title,
