@@ -1,6 +1,7 @@
 import { FaGithub, FaLinkedinIn, FaRegEnvelope, FaRegFileLines } from 'react-icons/fa6';
 
 import { ModeToggle } from '@/components/theme/theme-toggle';
+import { siteConfig } from '@/config/site';
 
 import { HomeNotification } from './notification';
 import { HomeProfile } from './profile';
@@ -23,13 +24,8 @@ export const HomeBanner = () => (
       <ModeToggle />
     </div>
 
-    <h1 className="m-0 text-[34px] leading-tight font-semibold tracking-[-0.02em]">Dominic Preap</h1>
-    <p className="text-foreground/80 m-0 max-w-[54ch] text-base leading-[1.75]">
-      Full-stack engineer. I ship across the whole stack — NestJS for GraphQL/REST APIs, React and Next.js on the web,
-      React Native/Expo on mobile, and manage the cloud infrastructure underneath it: servers, deployments, CI/CD, the
-      works. 10 years in, mostly on small teams where I&apos;m the one person covering frontend, backend, infra, and
-      everything in between.
-    </p>
+    <h1 className="m-0 text-[34px] leading-tight font-semibold tracking-[-0.02em]">{siteConfig.name}</h1>
+    <p className="text-foreground/80 m-0 max-w-[54ch] text-base leading-[1.75]">{siteConfig.description}</p>
 
     <nav className="flex flex-wrap gap-6 pt-2 text-sm">
       {links.map(x => (

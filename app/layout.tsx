@@ -4,13 +4,41 @@ import { Analytics } from '@vercel/analytics/next';
 import type { Metadata } from 'next';
 
 import { ThemeProvider } from '@/components/theme/theme-provider';
+import { siteConfig } from '@/config/site';
 import { jetbrainsMono } from '@/lib/font';
 import { cn } from '@/lib/utils';
 
-export const metadata: Metadata = {
-  title: 'Dominic Preap',
-  description: 'Full-stack engineer — React, React Native, NestJS, GraphQL.'
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const title = siteConfig.name;
+  const image = siteConfig.ogImage;
+  const description = siteConfig.description;
+  const keywords = siteConfig.keywords;
+
+  return {
+    title,
+    description,
+    keywords,
+    authors: [{ name: title, url: siteConfig.url }],
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      images: [image],
+      siteName: siteConfig.name,
+      // ---
+      countryName: 'Cambodia',
+      url: siteConfig.url,
+      emails: [siteConfig.email]
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: title,
+      description,
+      images: [image],
+      creator: '@DominicPreap'
+    }
+  };
+}
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
