@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedinIn, FaRegEnvelope, FaRegFileLines } from 'react-icons/fa6';
+import { FaGithub, FaLinkedinIn, FaRegEnvelope, FaRegFile } from 'react-icons/fa6';
 
 import { ModeToggle } from '@/components/theme/theme-toggle';
 import { siteConfig } from '@/config/site';
@@ -7,12 +7,10 @@ import { HomeNotification } from './notification';
 import { HomeProfile } from './profile';
 
 const links = [
-  { name: 'email', icon: FaRegEnvelope, href: 'mailto:preapchanoudom@gmail.com' },
-  { name: 'gitHub', icon: FaGithub, href: 'https://github.com/dominic-preap' },
-  { name: 'linkedin', icon: FaLinkedinIn, href: 'https://www.linkedin.com/in/dominic-preap' },
-
-  // https://rxresu.me/builder/01a05db0-9c62-7547-a6f3-29f842cdbc82
-  { name: 'cv.pdf', icon: FaRegFileLines, href: '/cv.pdf' }
+  { name: 'email', icon: FaRegEnvelope, href: `mailto:${siteConfig.email}` },
+  { name: 'gitHub', icon: FaGithub, href: siteConfig.githubLink },
+  { name: 'linkedin', icon: FaLinkedinIn, href: siteConfig.linkedinLink },
+  { name: 'cv.pdf', icon: FaRegFile, href: siteConfig.cvLink }
 ];
 
 export const HomeBanner = () => (
@@ -25,7 +23,8 @@ export const HomeBanner = () => (
     </div>
 
     <h1 className="m-0 text-[34px] leading-tight font-semibold tracking-[-0.02em]">{siteConfig.name}</h1>
-    <p className="text-foreground/80 m-0 max-w-[54ch] text-base leading-[1.75]">{siteConfig.description}</p>
+    <p className="text-foreground/80 text-[13px] font-medium tracking-widest uppercase">{siteConfig.position}</p>
+    <p className="text-foreground/80 m-0 max-w-[55ch] text-base leading-[1.75]">{siteConfig.description}</p>
 
     <nav className="flex flex-wrap gap-6 pt-2 text-sm">
       {links.map(x => (

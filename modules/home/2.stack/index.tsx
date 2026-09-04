@@ -92,7 +92,7 @@ export const HomeStack = () => (
     <div className="flex flex-col gap-5">
       {stack.map(row => (
         <div key={row.label} className="grid grid-cols-1 items-baseline gap-4 sm:grid-cols-5">
-          <div className="text-muted-foreground text-sm tracking-[0.06em]">{row.label}</div>
+          <div className="text-foreground/80 text-sm tracking-[0.06em]">{row.label}</div>
           <div className="flex flex-wrap gap-2 sm:col-span-4">
             {row.items.map(x => (
               <span

@@ -9,7 +9,7 @@ import { jetbrainsMono } from '@/lib/font';
 import { cn } from '@/lib/utils';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title = siteConfig.name;
+  const title = `${siteConfig.name} | ${siteConfig.position}`;
   const image = siteConfig.ogImage;
   const description = siteConfig.description;
   const keywords = siteConfig.keywords;

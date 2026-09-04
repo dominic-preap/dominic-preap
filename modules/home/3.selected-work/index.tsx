@@ -49,21 +49,23 @@ export const HomeSelectedWork = () => (
           key={x.name}
           href={x.href}
           target="_blank"
-          className="border-border hover:bg-foreground/2 group grid grid-cols-[1fr_auto] gap-x-6 gap-y-2 border-b px-1 py-5.5 transition-all md:px-2"
+          className="border-border hover:bg-foreground/2 group border-b px-1 py-5.5 transition-all md:px-2"
         >
-          <span className="flex items-center space-x-3 text-base font-medium">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              className="size-6 rounded transition-transform group-hover:scale-110"
-              alt={x.name}
-              src={`/images/${x.icon}`}
-            />
-            <span className="group-hover:text-primary transition-colors">{x.name}</span>
-          </span>
-          <span className="text-muted-foreground text-xs">{x.meta}</span>
-          <span className="text-foreground/80 col-span-2 max-w-[75ch] text-xs leading-relaxed font-light">
+          <div className="flex items-center justify-between space-x-6">
+            <div className="flex grow items-center space-x-3 text-base font-medium">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                className="size-6 rounded transition-transform group-hover:scale-110"
+                alt={x.name}
+                src={`/images/${x.icon}`}
+              />
+              <div className="group-hover:text-primary line-clamp-1 transition-colors">{x.name}</div>
+            </div>
+            <div className="text-muted-foreground text-xs text-nowrap">{x.meta}</div>
+          </div>
+          <div className="text-foreground/70 col-span-2 max-w-[75ch] pt-4 text-xs leading-relaxed font-light">
             {x.description}
-          </span>
+          </div>
         </a>
       ))}
     </div>

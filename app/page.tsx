@@ -16,7 +16,7 @@ export default function Home() {
         <HomeAlsoWork />
         <HomeContact />
 
-        <footer className="border-border text-muted-foreground flex justify-between gap-4 border-t pt-6 text-xs tracking-wider">
+        <footer className="border-border text-muted-foreground flex flex-col justify-between gap-4 border-t pt-6 text-xs tracking-wider sm:flex-row">
           <span>Phnom Penh, Cambodia</span>
           <span>Last updated Aug 2026</span>
         </footer>
