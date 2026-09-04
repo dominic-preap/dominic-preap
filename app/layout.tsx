@@ -9,11 +9,10 @@ import { jetbrainsMono } from '@/lib/font';
 import { cn } from '@/lib/utils';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title = `${siteConfig.name} | ${siteConfig.position}`;
+  const title = `${siteConfig.name} | Full-Stack Engineer, Dev Lead`;
   const image = siteConfig.ogImage;
   const keywords = siteConfig.keywords;
-  const description =
-    '10 years leading development across the stack: NestJS APIs, React/Next.js, React Native mobile, plus the cloud infra behind it all.';
+  const description = "10 years' experience in NestJS, React/Next.js, React Native, and cloud infrastructure.";
 
   return {
     title,
